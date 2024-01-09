@@ -78,6 +78,7 @@ const Hero = () => {
           }}
         >
           Reset
+          
         </button>
       </div>
       {result && (
