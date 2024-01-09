@@ -108,7 +108,7 @@ const Hero = () => {
           <img src={share} alt="" />
         </div>
         <div className="footer-clipboard">
-          <a href="">
+          <a href="https://github.com/Rdevang/thala-for-reason/">
             <img src={github} alt="" />
           </a>
         </div>
