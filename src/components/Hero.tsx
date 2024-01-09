@@ -1,5 +1,5 @@
 import { useState } from "react";
-import useSound from "use-sound";
+import useSound from "../../node_modules/use-sound/dist/index";
 import "./Hero.css";
 import whatsapp from "../assets/whatsapp.svg";
 import x from "../assets/x.svg";
@@ -8,6 +8,7 @@ import share from "../assets/share-svgrepo-com.svg";
 import mahibhai from "../assets/video_2024-01-09_21-22-57.mp4";
 import bolejokoyal from "../assets/src_boleJoKoyal.mp3";
 import moyemoye from "../assets/moye-moye.mp3";
+
 const Hero = () => {
   const [input, setinput] = useState("");
   const [result, setresult] = useState(false);
@@ -29,6 +30,7 @@ const Hero = () => {
       return;
     }
 
+    
     if (
       input.toLowerCase() === "dhoni" ||
       input.toLowerCase() === "msd" ||
@@ -107,7 +109,6 @@ const Hero = () => {
         </div>
         <div className="footer-clipboard">
           <a href="">
-           
             <img src={github} alt="" />
           </a>
         </div>
