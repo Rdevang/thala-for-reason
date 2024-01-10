@@ -2,7 +2,7 @@ import { useState } from "react";
 import useSound from "../../node_modules/use-sound/dist/index";
 import "./Hero.css";
 import whatsapp from "../assets/whatsapp.svg";
-import x from "../assets/x.svg";
+import twitter from "../assets/x.svg";
 import github from "../assets/github-1.svg";
 import share from "../assets/share-svgrepo-com.svg";
 import mahibhai from "../assets/video_2024-01-09_21-22-57.mp4";
@@ -113,7 +113,7 @@ const Hero = () => {
         <div className="footer-links">
           <p>Share On: </p>
           <img src={whatsapp} alt="" />
-          <img src={x} alt="" />
+          <img src={twitter} alt="" />
           <img src={share} alt="" />
         </div>
         <div className="footer-clipboard">
