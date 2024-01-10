@@ -1,5 +1,5 @@
 import { useState } from "react";
-import useSound from "use-sound";
+import useSound from "../../node_modules/use-sound/dist/index";
 import "./Hero.css";
 import whatsapp from "../assets/whatsapp.svg";
 import x from "../assets/x.svg";
