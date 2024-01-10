@@ -1,5 +1,5 @@
 import { useState } from "react";
-import useSound from "../../node_modules/use-sound/dist/index";
+import useSound from "use-sound";
 import "./Hero.css";
 import whatsapp from "../assets/whatsapp.svg";
 import x from "../assets/x.svg";
@@ -24,12 +24,13 @@ const Hero = () => {
     return sum % 7 === 0;
   }
   function checkreason() {
+    if (result) return;
     if (!input.length) {
-      alert("Input Box is Empty!!!");
+
+      alert("Input Box is Empty .Write something!!!");
       setresult(false);
       return;
     }
-
 
     if (
       input.toLowerCase() === "dhoni" ||
@@ -38,8 +39,8 @@ const Hero = () => {
       input.toLowerCase() === "mahendra singh dhoni" ||
       input.toLowerCase() === "mahi" ||
       input.toLowerCase() === "thala" ||
+      input.toLowerCase() === "#thalaforreason" ||
       input.toLowerCase() === "captain cool" ||
-      input === "7" ||
       input.length === 7 ||
       input.includes("7") ||
       parseInt(input) % 7 === 0 ||
@@ -63,7 +64,15 @@ const Hero = () => {
         type="text"
         value={input}
         onChange={(e) => {
+
           setinput(e.target.value);
+          if (!e.target.value.length) {
+            setresult(false);
+            setsuccess(false);
+            stopkoyal.stop();
+            stopmoye.stop();
+           
+          }
         }}
       />
       <div className="app__hero-button">
@@ -78,7 +87,6 @@ const Hero = () => {
           }}
         >
           Reset
-          
         </button>
       </div>
       {result && (
